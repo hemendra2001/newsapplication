@@ -1,0 +1,224 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: inherit; 
+}
+
+.navEdit{
+    background-color: rgb(145, 116, 206);
+}
+
+.heading{
+    color: rgb(206, 127, 205);
+    font-size: 40px;
+    margin:30px 0px;
+  text-align: center;
+}
+
+.heading:hover{
+    color: black;
+    transition: all 0.5s ease-in-out;
+}
+
+.intro{
+    text-transform: uppercase;
+    text-align: center;
+    margin: 30px 0px;
+    width: 100%;
+    border-radius: 50px;
+}
+.intro:hover{
+    color:rgb(145, 116, 206);
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+}
+
+.styleCard{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 5px;
+     } 
+
+.error{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.error:hover{
+   font-size: 50px;
+   color: red;
+   transition: all 0.5s ease-in-out;
+}
+.buttonEdit{
+    color:white;
+    border: 10px solid rgb(145, 116, 206);
+    background-color: rgb(145, 116, 206);
+    text-decoration: none;
+    border-radius: 100px;
+    text-align: center;
+    margin-top:15px ;
+    font-size: 20px;
+}
+
+.buttonEdit:hover{
+    color: black;
+    transition: all 0.5s ease-in-out;
+}
+
+.footer{
+    text-align: center;
+    margin-top: 20px;
+    background-color:rgb(145, 116, 206);
+    color: white;
+    line-height: 50px;
+}
+
+.footer:hover{
+    color: black;
+    transition: all 0.5s ease-in-out;
+    font-size: 25px;
+}
+
+.aboutdiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.create{
+    margin: 30px 0px;
+    color: rgb(62, 62, 110);
+}
+.create:hover{
+    font-size: 60px;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.name{
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: rgb(62, 62, 110);
+}
+.name:hover{
+    font-size: 60px;
+    transition: all 0.5s ease-in-out;
+   font-family: 'Times New Roman', Times, serif;
+}
+
+.about{
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: rgb(62, 62, 110);
+}
+.about:hover{
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: red;
+    font-size: 40px;
+    transition: all 0.8s ease-in-out;
+}
+.nav_list:hover{
+    color: black !important;
+    font-weight: bold;
+    transition: all 0.8s ease-in-out;
+}
+.logo:hover{
+    color: black !important;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+}
+
+.registerdiv{
+    height:67vh;
+    margin: 100px 0px 0px 0px;
+}
+.registerbutton{
+    color: white;
+    background: rgb(145, 116, 206);
+    padding: 7px 20px;
+    border: 1px solid white;
+}
+
+.registerbutton:hover{
+    color: black;
+    transition: all 0.5s ease-in-out;
+}
+
+.errorpage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    text-transform: uppercase;
+
+}
+.homeerror{
+    
+color: tomato;
+}
+.homeerror:hover{
+    color: green;
+}
+
+.searchdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.searchbar{
+    padding: 5px 60px;
+    margin: 0px 10px;
+    border: 1px solid yellowgreen;
+    color: orange;
+    
+}
+.searchbar:focus{
+    outline: 2px solid orange;
+}
+.searchbar::placeholder{
+  color: yellowgreen;
+  text-align: center;
+}
+
+
+.paginationBtn{
+    display: flex;
+    justify-content:flex-end;
+  margin: 30px 0px;
+  list-style-type: none;
+  align-items: center;
+  color: white;
+}
+
+.paginationBtn a{
+    align-items: center;
+    padding: 10px;
+    margin: 0px 5px;
+    justify-content: center;
+    background: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.paginationBtn a:hover{
+    color: tomato;
+}
+
+.paginationActive a{
+    background-color: tomato;
+}
+
+
+@media (max-width:600px){
+    .styleCard{
+       display: flex;
+       justify-content: space-around;
+        } 
+}
