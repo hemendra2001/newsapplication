@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const {postNews,get,getID,deleteUser,registerUser,deleteregisterUser,deleteregisterUserById,getUser,updateUser,loginUser,logOutUser} = require("../controller/controller");
+const {postNews,get,getID,deleteUser,registerUser,deleteregisterUser,deleteregisterUserById,getUser,updateUser,loginUser} = require("../controller/controller");
 const upload = require("./../controller/multer");
 const connection = require('./../model/connection')
 const secure = require("./../middleware/secure");
@@ -19,6 +19,5 @@ router.post("/register",registerUser);
 // router.get("/getAllUser",getUser)
 // router.put("/updateUser/:id",updateUser)
 router.post("/login",loginUser)
-router.get("/logout",logOutUser)
 
 module.exports = router;

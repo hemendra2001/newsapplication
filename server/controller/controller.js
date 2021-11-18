@@ -175,12 +175,7 @@ const loginUser = async(req,res)=>{
                 if(match){
                 //  Here generate token
                 const token = jwt.sign({_id:getUser._id},"Mysecret");
-                // Here store in cookie
-                res.cookie("userLogin",token,{
-                    httpOnly:true,
-                
-                })
-                res.status(200).json({User:getUser.username});
+                res.status(200).json({User:getUser.username,Token:token});
                 }
                 else{
                     res.status(400).json({Message:"Invalid Credentials"}); 
@@ -198,21 +193,10 @@ const loginUser = async(req,res)=>{
 }
 
 
-// Here Logout User API
-
-const logOutUser = async(req,res) =>{
-    try{
-        res.clearCookie('userLogin',{path:'/'})
-        res.status(200).json('User Logout Successfull');
-    }
-    catch(err){
-        console.log(err);
-        res.status(500).json({Message:"Internal Error"});
-    }
-}
 
 
 
 
 
-module.exports = { postNews, get, getID, deleteUser,registerUser,deleteregisterUser,deleteregisterUserById,getUser,updateUser,loginUser,logOutUser};
+
+module.exports = { postNews, get, getID, deleteUser,registerUser,deleteregisterUser,deleteregisterUserById,getUser,updateUser,loginUser};

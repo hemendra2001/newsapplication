@@ -8,14 +8,12 @@ import Login from "./pages/Login";
 import Logout from "./pages/Logout";
 import Register from "./pages/Register";
 import Single from './pages/Single';
-import AuthContext from "./context/AuthContext";
 
 
 
 const App = () =>{
 return(
 <>
-<AuthContext>
 <BrowserRouter>
 <Switch>
 <Route exact path="/" component={Home}></Route>
@@ -35,7 +33,6 @@ return(
 <Route component={ErrorPage}></Route>
 </Switch>
 </BrowserRouter>
-</AuthContext>
 </>
 
 )

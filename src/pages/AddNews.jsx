@@ -1,4 +1,4 @@
-import { useState} from 'react'
+import { useState,useEffect} from 'react'
 import { useHistory } from 'react-router'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
@@ -12,6 +12,15 @@ const[data,setData] = useState({
 const [error,setError] = useState(false);
 const history = useHistory();
 const ref = React.useRef();
+
+
+useEffect(()=>{
+const user = localStorage.getItem("user")
+if(!user){
+    history.push("/")
+}
+},[])
+
 
 const handleChange = (e) =>{
 setData({...data,[e.target.name]:e.target.value})

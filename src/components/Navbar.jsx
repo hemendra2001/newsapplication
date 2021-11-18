@@ -1,10 +1,13 @@
 import {Link} from 'react-router-dom';
-import { useContext } from 'react';
-import {LoginContext} from './../context/AuthContext'
+
 
 
 const Navbar = () => {
-const {username,setUsername} = useContext(LoginContext);
+const user = localStorage.getItem("user")
+if(user){
+  var username = JSON.parse(user)
+  username = username.User
+}
 
     return (
         <>
@@ -16,9 +19,11 @@ const {username,setUsername} = useContext(LoginContext);
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav ms-auto ">
-      
-{username?
-<>
+
+
+{
+  user ?
+  <>
 <li className="nav-item ">
           <Link className="nav-link active nav_list" aria-current="page" to="/">{username}</Link>
         </li>
@@ -34,9 +39,11 @@ const {username,setUsername} = useContext(LoginContext);
         <li className="nav-item">
           <Link className="nav-link active nav_list" aria-current="page" to="/logout">Logout</Link>
         </li>
-</>
-:
-<>
+
+
+  </>
+  :
+  <>
 <li className="nav-item ">
           <Link className="nav-link active nav_list" aria-current="page" to="/">Home</Link>
         </li>
@@ -49,8 +56,17 @@ const {username,setUsername} = useContext(LoginContext);
         <li className="nav-item">
           <Link className="nav-link active nav_list" aria-current="page" to="/login">Login</Link>
   </li>
-</>
+
+
+
+  </>
 }
+
+
+
+
+
+
       </ul>
     </div>
   </div>

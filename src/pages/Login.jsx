@@ -2,8 +2,6 @@ import { useState} from 'react';
 import { useHistory } from 'react-router';
 import Navbar from './../components/Navbar';
 import Footer from './../components/Footer';
-import { useContext } from 'react';
-import { LoginContext } from '../context/AuthContext';
 
 
 
@@ -13,7 +11,6 @@ const Login = () => {
     email:'',password:''
     });
     const history = useHistory();
-    const{username,setUsername} = useContext(LoginContext)
   
     const handleUser = (e) =>{
       setUser({...user,[e.target.name]:e.target.value});
@@ -32,8 +29,7 @@ const Login = () => {
        })
        const data =  await res.json();
        if(res.status === 200){
-         const info = data.User
-         setUsername(info)
+        localStorage.setItem("user",JSON.stringify(data))
          alert("User Login Successfull");
          history.push("/");
        }
